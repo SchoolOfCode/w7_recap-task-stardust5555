@@ -1,5 +1,5 @@
 import React from "react";
-import Comment from "../Comment/index"
+//import Comment from "../Comment/index"
 
 function CommentList() {
   const comments = [
@@ -14,11 +14,25 @@ function CommentList() {
       content: "Many thank yous",
     },
   ];
-  
-  
-  
+ 
+    
   return (
-    <h1>yo</h1>
+    <main>
+     {comments.map(comment => {
+        return (
+          <div key={comment.id}>
+            <h2>
+              {comment.author}
+            </h2>
+               <hr />
+            <p>
+              {comment.content}
+            </p>
+          </div>
+        );
+      })}
+
+    </main>
   );
 }
 
